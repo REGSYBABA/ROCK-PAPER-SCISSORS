@@ -1,5 +1,5 @@
 let compchoice = ["rock", "paper", "scissors"]
-const playerSelection = "paper";
+let playerSelection = "paper";
 const computerSelection = getComputersChoice();
 let playerScore = 0
 let computerScore = 0
@@ -21,6 +21,7 @@ function game(){
              || playerSelection == 'rock' && computerSelection == 'scissors'){
             playerScore++ 
             console.log(playerScore)
+            console.log(computerScore)
             if (playerScore > computerScore){
                 console.log('jaja')
             }
@@ -30,6 +31,7 @@ function game(){
             || computerSelection == 'rock' && playerSelection == 'scissors'){
             computerScore++ 
             console.log(computerScore)
+            console.log(playerScore)
             if(computerScore > playerScore){
                 console.log('haha')
             }
