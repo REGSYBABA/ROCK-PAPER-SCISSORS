@@ -1,59 +1,72 @@
 let compchoice = ["rock", "paper", "scissors"]
-const playerSelection = "scissors";
+const playerSelection = "paper";
 const computerSelection = getComputersChoice();
+let playerScore = 0
+let computerScore = 0
 
 
 function getComputersChoice(){
          const randomIndex = Math.floor(Math.random() * compchoice.length)
          const item = compchoice[randomIndex]
          return item
-        // console.log(item)
 
 }
 getComputersChoice()
 
-let playerScore = 0
-let computerScore = 0
-// playerScore++
-// console.log(playerScore)
 
-function game(playerScore, computerScore){
-    
-    if (playerScore === playerScore){
-         console.log('jaja')   
-    }else if (computerScore === computerScore){
-        console.log('balls')
+function game(){
+    function playRound(playerSelection, computerSelection) {
+        if (playerSelection == 'scissors' && computerSelection == 'paper' 
+             || playerSelection == 'paper' && computerSelection == 'rock' 
+             || playerSelection == 'rock' && computerSelection == 'scissors'){
+            playerScore++ 
+            console.log(playerScore)
+            if (playerScore > computerScore){
+                console.log('jaja')
+            }
+            return "Player Wins"
+        }else if (computerSelection == 'scissors' && playerSelection == 'paper' 
+            || computerSelection == 'paper' && playerSelection == 'rock' 
+            || computerSelection == 'rock' && playerSelection == 'scissors'){
+            computerScore++ 
+            console.log(computerScore)
+            if(computerScore > playerScore){
+                console.log('haha')
+            }
+            return "Computer Wins"
+        }else {
+            console.log(playerScore)
+            console.log(computerScore)
+            return "it's a tie"
+        }   
     }
-    playRound()
-    playRound()
-    playRound()
-    playRound()
+    console.log(playRound(playerSelection, computerSelection))
+    console.log(playRound(playerSelection, computerSelection))
+    console.log(playRound(playerSelection, computerSelection))
+    console.log(playRound(playerSelection, computerSelection))
     console.log(playRound(playerSelection, computerSelection))
 }
+
+
+
+
+// function playRound(playerSelection, computerSelection) {
+//     if (playerSelection == 'rock' && computerSelection == 'paper' || playerSelection == 'paper' && computerSelection == 'rock'){
+//         playerScore++ 
+//         console.log(playerScore)
+//         return "You Lose! Paper beats Rock"
+//     }else if (playerSelection == 'scissors' && computerSelection == 'rock'){
+//         computerScore++ 
+//         console.log(computerScore)
+//         return "You Lose! Rock beats Scissors"
+//     }else {
+//         playerScore++
+//         console.log(playerScore)
+//         console.log(computerScore)
+//         return "it's a tie"
+//     }   
+// }
 game()
-
-
-
-
-function playRound(playerSelection, computerSelection) {
-    // your code here!
-    if (playerSelection == 'rock' && computerSelection == 'paper' || playerSelection == 'paper' && computerSelection == 'rock'){
-        playerScore++ 
-        console.log(playerScore)
-        return "You Lose! Paper beats Rock"
-    }else if (playerSelection == 'scissors' && computerSelection == 'rock'){
-        playerScore++ 
-        console.log(playerScore)
-        return "You Lose! Rock beats Scissors"
-    }else {
-        playerScore++
-        console.log(playerScore)
-        console.log(computerScore)
-        return "it's a tie"
-    }
-    
-}
-
 
 
 //  let compchoice = ["rock", "paper", "scissors"]
