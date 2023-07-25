@@ -55,7 +55,20 @@ function game(){
     console.log(playRound(playerSelection, computerSelection))
 }
 
-
+// function getPlayerChoice(){
+//     let validatedInput = false
+//     while(validatedInput == false){
+//         const userChoice = prompt('Choose Your Weapon', 'Rock, Paper, Scissors')
+//         if(userChoice == null){
+//             continue;
+//         }
+//         const choiceInLower = userChoice.toLowerCase()
+//         if(options.includes(choiceInLower)){
+//             validatedInput = true
+//             return choiceInLower
+//         }
+//     }
+// }
 
 
 game()

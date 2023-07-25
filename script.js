@@ -15,38 +15,39 @@ getComputersChoice()
 
 
 function game(){
-    function playRound(playerSelection, computerSelection) {
-        if (playerSelection == 'scissors' && computerSelection == 'paper' 
-             || playerSelection == 'paper' && computerSelection == 'rock' 
-             || playerSelection == 'rock' && computerSelection == 'scissors'){
-            playerScore++ 
-            console.log(playerScore)
-            console.log(computerScore)
-            if (playerScore > computerScore){
-                console.log('jaja')
-            }
-            return "Player Wins"
-        }else if (computerSelection == 'scissors' && playerSelection == 'paper' 
-            || computerSelection == 'paper' && playerSelection == 'rock' 
-            || computerSelection == 'rock' && playerSelection == 'scissors'){
-            computerScore++ 
-            console.log(computerScore)
-            console.log(playerScore)
-            if(computerScore > playerScore){
-                console.log('haha')
-            }
-            return "Computer Wins"
-        }else {
-            console.log(playerScore)
-            console.log(computerScore)
-            return "it's a tie"
-        }   
+    if (playerScore > computerScore){
+        console.log('jaja')
+    }else if(computerScore > playerScore){
+        console.log('haha')
     }
     console.log(playRound(playerSelection, computerSelection))
     console.log(playRound(playerSelection, computerSelection))
     console.log(playRound(playerSelection, computerSelection))
     console.log(playRound(playerSelection, computerSelection))
     console.log(playRound(playerSelection, computerSelection))
+}
+game()
+
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection == 'scissors' && computerSelection == 'paper' 
+         || playerSelection == 'paper' && computerSelection == 'rock' 
+         || playerSelection == 'rock' && computerSelection == 'scissors'){
+        playerScore++ 
+        console.log(playerScore)
+        console.log(computerScore)
+        return "Player Wins"
+    }else if (computerSelection == 'scissors' && playerSelection == 'paper' 
+        || computerSelection == 'paper' && playerSelection == 'rock' 
+        || computerSelection == 'rock' && playerSelection == 'scissors'){
+        computerScore++ 
+        console.log(computerScore)
+        console.log(playerScore)
+        return "Computer Wins"
+    }else {
+        console.log(playerScore)
+        console.log(computerScore)
+        return "it's a tie"
+    }   
 }
 
 
@@ -68,7 +69,7 @@ function game(){
 //         return "it's a tie"
 //     }   
 // }
-game()
+
 
 
 //  let compchoice = ["rock", "paper", "scissors"]
