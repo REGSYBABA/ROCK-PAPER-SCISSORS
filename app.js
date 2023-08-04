@@ -34,6 +34,7 @@ rockBtn.forEach(button => {
     announceWinner()
 
     button.classList.add('clicked')
+   
     
   })
 })
