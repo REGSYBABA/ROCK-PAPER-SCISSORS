@@ -3,6 +3,15 @@
 // const computerSelection = getComputersChoice();
 // let playerScore = 0
 // let computerScore = 0
+// let para = document.getElementById('chosen-player') 
+// let para2 = document.getElementById('result')
+// let para3 = document.getElementById('chosen-comp')
+// let rockBtn = document.querySelectorAll('button')
+// let scoreEl1 = document.getElementById('score1')
+// let scoreEl2 = document.getElementById('score2')
+// let modal = document.querySelector('.modal')
+// let winEl = document.getElementById('modal-result')
+// let playAgain = document.getElementById('play')
 
 
 // function getComputersChoice(){
