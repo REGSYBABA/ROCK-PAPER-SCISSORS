@@ -5,6 +5,7 @@ let playerScore = 0
 let computerScore = 0
 
 
+
 function getComputersChoice(){
     const randomIndex = Math.floor(Math.random() * compchoice.length)
     const item = compchoice[randomIndex]
